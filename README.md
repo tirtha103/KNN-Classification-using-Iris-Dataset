@@ -63,20 +63,6 @@ Build and evaluate a **K-Nearest Neighbors (KNN)** model to classify species of 
 
 ---
 
-##  Project Structure
-
-knn-iris-classification/
-├── data/
-│ └── iris.csv
-├── images/
-│ └── confusion_matrix.png
-├── notebooks/
-│ └── iris_knn_classification.ipynb
-├── LICENSE
-├── README.md
-└── requirements.txt
----
-
 ##  Tools & Libraries Used
 
 - **Language:** Python  
