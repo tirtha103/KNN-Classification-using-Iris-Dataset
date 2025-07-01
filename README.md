@@ -8,82 +8,83 @@
 
 ##  Objective
 
-Build and evaluate a **K-Nearest Neighbors (KNN)** model to classify species of iris flowers using petal and sepal measurements. This project demonstrates an end-to-end ML workflow from preprocessing to model evaluation — as part of a professional internship submission.
+Build and evaluate a **K-Nearest Neighbors (KNN)** model to classify species of iris flowers based on petal and sepal measurements. Demonstrate complete ML workflow from data cleaning to visual decision boundaries.
 
 ---
 
 ##  Dataset
 
 - **Source:** [Iris Dataset – Kaggle](https://www.kaggle.com/datasets/uciml/iris)  
-- **Target Classes:**  
-  - `Iris-setosa`  
-  - `Iris-versicolor`  
-  - `Iris-virginica`  
-- **Shape:** `150 rows × 5 columns`  
-- **Target Column:** `Species`
+- **Classes:** `Iris-setosa`, `Iris-versicolor`, `Iris-virginica`  
+- **Shape (after cleaning):** `150 rows × 5 columns`  
+- **Target Variable:** `Species`
 
 ---
 
 ##  Workflow Summary
 
-### 1️ Data Cleaning
-- Dropped unnecessary `Id` column
-- Verified **no null/missing values**
+### 1️ Data Cleaning  
+- Dropped unnecessary `Id` column  
+- Verified no missing/null values  
+- Saved cleaned version as `iris_cleaned.csv`   
 
-### 2️ Label Encoding & Feature Scaling
-- Converted species labels to numbers using `LabelEncoder`
-- Scaled all features using `StandardScaler` (important for KNN)
+### 2️ Label Encoding & Feature Scaling  
+- Encoded flower names (`Species`) to numeric labels: `0`, `1`, `2`  
+- Standardized all features using `StandardScaler`  
 
-### 3️ Model Building: KNN Classifier
-- Trained multiple KNN models with different `k` values (1 to 15)
-- Selected **best k = 11** based on highest accuracy
+### 3️ Exploratory Data Analysis (EDA)  
+-  Generated **boxplots** to visualize feature distributions  
+-  Created a **correlation heatmap**  
+-  Analyzed class distribution, feature types, and outliers  
 
-### 4️ Evaluation Metrics
-- Accuracy score
-- Confusion matrix
-- Classification report
+### 4️ Model Building: KNN Classifier  
+- Explored different values of **K (1 to 15)**  
+- Best accuracy at **K = 1**: `96.67%`  
+- Trained final KNN model on scaled data  
 
----
+### 5️ Model Evaluation  
+- Evaluated using **accuracy**, **confusion matrix**, and **classification report**  
+- Saved confusion matrix proof as: `images/confusion_matrix.png`  
 
-##  Final Results (K = 11)
-
-| Metric    | Value     |
-|-----------|-----------|
-| Accuracy  | 96.67%    |
-| Best `k`  | 11        |
-| Classes   | 3         |
-
----
-
-##  Confusion Matrix
-
- Stored in: `images/confusion_matrix.png`
-
-![Confusion Matrix](images/confusion_matrix.png)
+### 6️ Visual Decision Boundary  
+- Trained a 2D KNN model on first two features  
+- Created a **mesh grid** to plot class separation  
+- Saved output as: `images/knn_decision_boundary.png`  
 
 ---
 
+##  Final Results
+
+| Metric              | Value       |
+|---------------------|-------------|
+| Accuracy (K = 1)    | **96.67%**  |
+| Number of Classes   | 3           |
+| Best K Value        | 1           |
+
+---
 ##  Tools & Libraries Used
 
-- **Language:** Python  
-- **Libraries:** `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`  
-- **Environment:** Jupyter Notebook  
+- Python  
+- pandas, numpy  
+- scikit-learn  
+- matplotlib, seaborn  
+- Jupyter Notebook  
 
 ---
 
 ##  Skills Demonstrated
 
-- Distance-based classification (KNN)
-- Feature scaling and label encoding
-- Model selection using accuracy
-- Visualization and interpretation of results
-- Complete end-to-end ML pipeline
-- GitHub-based ML project documentation
+- Data Cleaning & Preprocessing (Task 1)  
+- Exploratory Data Analysis (Task 2)  
+- Feature Scaling & Label Encoding (Task 3)  
+- Classification using KNN (Task 4 & Task 6)  
+- Confusion Matrix & Evaluation Reports  
+- Visual Decision Boundary Plot (Task 6B)  
+- GitHub project structuring & documentation
 
 ---
 
-##  Conclusion
+>  *This project is built for internship evaluation and job-readiness. All steps are implemented with professional standards, including proofs from Tasks 1–6.*
 
-This project shows how even a simple algorithm like KNN can achieve high accuracy with proper preprocessing and evaluation. It is a clean, practical example of supervised learning applied to a real-world dataset — suitable for internship evaluation, resume building, or portfolio showcase.
 
----
+
